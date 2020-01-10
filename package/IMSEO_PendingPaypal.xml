@@ -1,0 +1,104 @@
+<_>
+   <form_key>DeEW83gzGEYykGPA</form_key>
+   <name>IMSEO_PendingPaypal</name>
+   <channel>community</channel>
+   <version_ids>
+      <version_ids>2</version_ids>
+   </version_ids>
+   <summary>This module activates the orders with pending payment into the customer&apos;s orders list and allows the customer to proceed with the payment.</summary>
+   <description>The default Magento configuration doesn&apos;t show, into the customer&apos;s orders list, the orders with pending payment.
+This module activates the orders with pending payment into the customer&apos;s orders list and allows the customer to proceed with the payment.
+The customer can to pay an old order placed with paypal payment method with simple click on link in the payment section of order.
+
+</description>
+   <license>GPL v.3.0</license>
+   <license_uri>http://cloudbox.it/software/magento/pendingpaypal.html</license_uri>
+   <version>1.0.0</version>
+   <stability>stable</stability>
+   <notes>First release</notes>
+   <authors>
+      <name>
+         <name>IMSEO Srl</name>
+      </name>
+      <user>
+         <user>wallaceer</user>
+      </user>
+      <email>
+         <email>info@imseo.it</email>
+      </email>
+   </authors>
+   <depends_php_min>5.3.3</depends_php_min>
+   <depends_php_max>5.3.3</depends_php_max>
+   <depends>
+      <package>
+         <name>
+            <name/>
+         </name>
+         <channel>
+            <channel/>
+         </channel>
+         <min>
+            <min/>
+         </min>
+         <max>
+            <max/>
+         </max>
+         <files>
+            <files>            </files>
+         </files>
+      </package>
+      <extension>
+         <name>
+            <name>Core</name>
+         </name>
+         <min>
+            <min/>
+         </min>
+         <max>
+            <max/>
+         </max>
+      </extension>
+   </depends>
+   <contents>
+      <target>
+         <target>magelocal</target>
+         <target>magelocal</target>
+         <target>magedesign</target>
+         <target>magedesign</target>
+         <target>mageetc</target>
+         <target>mageetc</target>
+      </target>
+      <path>
+         <path/>
+         <path>IMSEO/PendingPaypal/</path>
+         <path>frontend/default/default/layout/PendingPaypal.xml</path>
+         <path>frontend/default/default/template/PendingPaypal/</path>
+         <path>modules/IMSEO_PendingPaypal.xml</path>
+         <path>modules/IMSEO_Sales.xml</path>
+      </path>
+      <type>
+         <type>file</type>
+         <type>dir</type>
+         <type>file</type>
+         <type>dir</type>
+         <type>file</type>
+         <type>file</type>
+      </type>
+      <include>
+         <include/>
+         <include/>
+         <include/>
+         <include/>
+         <include/>
+         <include/>
+      </include>
+      <ignore>
+         <ignore/>
+         <ignore/>
+         <ignore/>
+         <ignore/>
+         <ignore/>
+         <ignore/>
+      </ignore>
+   </contents>
+</_>

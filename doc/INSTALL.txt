@@ -1,0 +1,50 @@
+Pending Payment PayPal Installazione
+------------------------------
+
+1. Decomprimere il pacchetto sul proprio computer
+2. Collegarsi via ftp al sito web magento su cui va installato il modulo
+3. Caricare la cartella "app" presente in "ImseoPendigPaypal" nella root del proprio sito magento.
+   N.B. Se si sta utilizzando un template personalizzato, non uno di quelli proposti da Magento, 
+   caricare il contenuto della directory app/design/fronted/default/default/ nella directory del proprio tema (app/design/fronted/default/MIO-TEMA/)
+   
+4. Andare nel pannello di amministrazione
+5. Andare in Configurazione -> Advanced e verificare che il modulo sia installato ed attivo. Eventualmente attivare il modulo
+6. Andare in Configurazione -> Pending Paypal Payment e configurare il modulo impostando lo stato ordie e la pagina di atterraggio per l'utente a pagamento effettuato
+
+
+RISOLUZIONE DI POSSIBILI PROBLEMI
+1. Il modulo risulta installato e attivato dal pannello di Magento ma non si vede il link nella scheda dell'ordine?
+Con alcuni template può essere necessario copiare i file del template e del layout nella directory del template stesso; per farlo procedere in questo modo:
+a) Disattivare il modulo dalla sezione Sistema -> Configurazione -> Avanzate del pannello di amministrazione
+b) Copiare via ftp il contenuto della directory ImseoPendigPaypal/app/design/frontend/default/default/ del pacchetto nella directory del template in uso
+c) Attivare il modulo da Sistema -> Configurazione -> Avanzate del pannello di amministrazione
+d) Svuotare la cache
+
+
+
+
+
+
+
+===================================
+
+Pending Payment PayPal Install
+------------------------------
+
+1. Unzip the package on your computer
+2. Log in to the magento website via ftp on which the module is installed
+3. Upload the folder "app" in the root of your magento site.
+   If you use a different from default theme - be sure to rename app/design/frontend/default/default folders to your store's values. 
+   Using your FTP client upload content directory to your store root.
+4. Go to the admin panel
+5. Go to Configuration -> Advanced and check that the module is installed and running. If necessary, activate the module
+6. Go to Configuration -> Pending Paypal Payment and configure the module by setting the status ordie and the landing page for the user to payment
+
+
+RESOLUTION OF POSSIBLE PROBLEMS
+1 The module is installed and activated from the panel of Magento but you do not see the link in the tab order?
+With some templates may be necessary to copy the template files and the layout in the same directory as the template; to do this proceed as follows:
+a) Turn off the module from the section System -> Configuration -> Advanced admin panel
+b) Copy the contents of the directory via ftp ImseoPendigPaypal / app / design / frontend / default / default / package in the directory of the template in use
+c) Enable the module from System -> Configuration -> Advanced admin panel
+d) Empty the cache

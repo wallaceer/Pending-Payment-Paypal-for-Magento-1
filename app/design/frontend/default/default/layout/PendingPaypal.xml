@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <sales_order_view>
+        <reference name="sales.order.info">
+            <action method="setTemplate"><tpl>PendingPaypal/info.phtml</tpl></action>
+        </reference>
+    </sales_order_view>
+</layout>

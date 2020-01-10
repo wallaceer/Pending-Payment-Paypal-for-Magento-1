@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <WS_PendingPaypal>
+            <active>true</active>
+            <codePool>local</codePool>
+            <version>1.0.2</version>
+        </WS_PendingPaypal>
+    </modules>
+</config>

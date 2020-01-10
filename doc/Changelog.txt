@@ -1,0 +1,22 @@
+ Pending Payment Paypal - change logs
+-------------------------------------------
+Legend:
++ new feature added
+* bug fix
+
+v1.0.0 (March 27, 2014)
+* First release
+
+v1.0.1 (Nov 26, 2014)
+* Update template structure
+* When the customer running the payment the order status is updated 
+* When the customer running the payment he can return to merchant's site
+* Add config for order ststus and landig page
+* Add list cms page in config option
+
+v1.0.2 (March 18, 2015)
+* Add the automatic creation of the invoice
+
+v.1.0.3 (February 23, 2016)
+* Fixed currency order (instead of default store currency)
+* Fixed table prefix on setup
