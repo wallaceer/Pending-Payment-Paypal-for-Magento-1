@@ -15,6 +15,7 @@ The module provides a small configuration panel where you can:
     • Set the landing page to the user's payment. The page can be selected from the list of pages in the CMS.
 
 #Setup
+
 The installation of the module is very simple:
 
     1. Go to your Magento Admin Panel and disable cache
@@ -32,6 +33,7 @@ If the module doesn’t work refresh the cache.
 ####See the full setup description in doc/INSTALL.txt
 
 #Configuration
+
 The module Pending Paypal provide a configuration panel from which it is possibile to set:
 
     • the order state after payment
