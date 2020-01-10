@@ -10,7 +10,7 @@ Pending Payment PayPal Installazione
 4. Andare nel pannello di amministrazione
 5. Andare in Configurazione -> Advanced e verificare che il modulo sia installato ed attivo. Eventualmente attivare il modulo
 6. Andare in Configurazione -> Pending Paypal Payment e configurare il modulo impostando lo stato ordie e la pagina di atterraggio per l'utente a pagamento effettuato
-
+7. Andare nella configurazione di PayPal e, se poresente, impostare su No la voce "Skip Order Review Step"
 
 RISOLUZIONE DI POSSIBILI PROBLEMI
 1. Il modulo risulta installato e attivato dal pannello di Magento ma non si vede il link nella scheda dell'ordine?
@@ -39,7 +39,7 @@ Pending Payment PayPal Install
 4. Go to the admin panel
 5. Go to Configuration -> Advanced and check that the module is installed and running. If necessary, activate the module
 6. Go to Configuration -> Pending Paypal Payment and configure the module by setting the status ordie and the landing page for the user to payment
-
+7. Go to PayPal configuration page and, if it is present, set No for "Skip Order Review Step"
 
 RESOLUTION OF POSSIBLE PROBLEMS
 1 The module is installed and activated from the panel of Magento but you do not see the link in the tab order?
