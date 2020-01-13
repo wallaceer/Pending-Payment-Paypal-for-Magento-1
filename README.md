@@ -14,6 +14,10 @@ The module provides a small configuration panel where you can:
     • Set the order status after payment is received
     • Set the landing page to the user's payment. The page can be selected from the list of pages in the CMS.
 
+#Requisites
+    - Magento 1.7, 1.8, 1.9
+    - Paypal Pro
+
 #Setup
 
 The installation of the module is very simple:
