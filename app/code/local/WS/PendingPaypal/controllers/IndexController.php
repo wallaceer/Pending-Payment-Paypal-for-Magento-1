@@ -13,10 +13,10 @@ class WS_PendingPaypal_IndexController extends Mage_Core_Controller_Front_Action
         $this->loadLayout();
         $this->renderLayout();
     }
-    
+
     /**
      * Update Order status
-     * 
+     *
      * STATE_COMPLETE
      * STATE_PROCESSING
      * STATE_CLOSED
@@ -28,44 +28,54 @@ class WS_PendingPaypal_IndexController extends Mage_Core_Controller_Front_Action
      * STATUS_FRAUD
      */
     public function setordercompletedAction(){
-        
+
         $this->getPendingPaypalStoreConfig();
-        
+
         #echo $this->orderState;
         #exit;
         //Get order increment id
         $orderId = $this->getOrderIdAction();
+        if($orderId === null) {
+            throw new \RuntimeException('Error Processing Request: Order id is not defined!', 1);
+        }
+
         $order = Mage::getModel('sales/order')->loadByIncrementId($orderId);
-        
+
         //Create Invoice
         $this->createOrderInvoiceAfterPaypalPayment($order);
-        
+
         //Update Order status
         $order->setState($this->orderState, true)->save();
-        
+
         #echo $this->landingPage;
         #exit;
         //Redirect to customer's account
         $this->_redirect($this->landingPage);
     }
-    
-    
+
+
     /**
      *return order id by url
      * /PendingPaypal/index/setordercompleted/order_id/$id/
      */
     function getOrderIdAction(){
+      try {
         $params = $this->getRequest()->getParams();
-        return $params['order_id'];
+        return preg_match('/[0-9]+/', $params['order_id']) ? $params['order_id'] : null;
+      } catch (\Exception $e) {
+        echo $e->getMessage();
+      }
+
+
     }
-    
-  
+
+
     function getPendingPaypalStoreConfig(){
         $this->orderState = Mage::getStoreConfig('pending_paypal/pending_paypal_settings/pending_paypal_state');
         $this->landingPage = Mage::getStoreConfig('pending_paypal/pending_paypal_settings/pending_paypal_landingpage');
     }
-    
-    
+
+
     /**
      * Create order's invoice
      */
@@ -75,27 +85,27 @@ class WS_PendingPaypal_IndexController extends Mage_Core_Controller_Front_Action
             {
                 Mage::throwException(Mage::helper('core')->__('Cannot create an invoice.'));
             }
-        
+
             $invoice = Mage::getModel('sales/service_order', $order)->prepareInvoice();
-        
+
             if (!$invoice->getTotalQty()) {
                 Mage::throwException(Mage::helper('core')->__('Cannot create an invoice without products.'));
             }
-        
+
             $invoice->setRequestedCaptureCase(Mage_Sales_Model_Order_Invoice::CAPTURE_ONLINE);
             $invoice->register();
             $transactionSave = Mage::getModel('core/resource_transaction')
             ->addObject($invoice)
             ->addObject($invoice->getOrder());
-        
+
             $transactionSave->save();
         }
         catch (Mage_Core_Exception $e) {
-        
+
         }
-        
+
     }
-    
+
 }
 
 ?>

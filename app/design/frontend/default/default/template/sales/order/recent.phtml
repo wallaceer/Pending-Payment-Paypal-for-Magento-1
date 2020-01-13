@@ -62,11 +62,7 @@
                         <span class="separator">|</span> <a href="<?php echo $this->getViewUrl($_order) ?>"><?php echo $this->__('View Order & Pay Now') ?></a>
                         <?php
                             if(Mage::getStoreConfig('advanced/modules_disable_output/WS_PendingPaypal') == 0):
-
-                                //$WSCurrency =  Mage::app()->getStore()->getCurrentCurrencyCode();
-                                //added by gas
                                 $WSCurrency = $_order->getOrderCurrencyCode();
-                                //end gas
                                 $gTotal = round($_order->getGrandTotal(), 2);
                                 if($_order->getStatus() == 'pending_payment'):
                                     //get paypal email
