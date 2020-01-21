@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>WS_PendingPaypal</name>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <stability>stable</stability>
     <license uri="https://blog.waltersanti.info/2017/12/14/modulo-pending-payment-paypal-per-magento-1-ce/">GPL v.3.0</license>
     <channel>community</channel>
