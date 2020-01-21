@@ -1,6 +1,6 @@
 <_>
    <form_key>DeEW83gzGEYykGPA</form_key>
-   <name>IMSEO_PendingPaypal</name>
+   <name>WS_PendingPaypal</name>
    <channel>community</channel>
    <version_ids>
       <version_ids>2</version_ids>
@@ -18,13 +18,13 @@ The customer can to pay an old order placed with paypal payment method with simp
    <notes>First release</notes>
    <authors>
       <name>
-         <name>IMSEO Srl</name>
+         <name>WS</name>
       </name>
       <user>
          <user>wallaceer</user>
       </user>
       <email>
-         <email>info@imseo.it</email>
+         <email>ws@waltersanti.info</email>
       </email>
    </authors>
    <depends_php_min>5.3.3</depends_php_min>
@@ -70,11 +70,11 @@ The customer can to pay an old order placed with paypal payment method with simp
       </target>
       <path>
          <path/>
-         <path>IMSEO/PendingPaypal/</path>
+         <path>WS/PendingPaypal/</path>
          <path>frontend/default/default/layout/PendingPaypal.xml</path>
          <path>frontend/default/default/template/PendingPaypal/</path>
-         <path>modules/IMSEO_PendingPaypal.xml</path>
-         <path>modules/IMSEO_Sales.xml</path>
+         <path>modules/WS_PendingPaypal.xml</path>
+         <path>modules/WS_Sales.xml</path>
       </path>
       <type>
          <type>file</type>
